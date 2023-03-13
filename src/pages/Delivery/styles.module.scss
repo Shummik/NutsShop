@@ -1,0 +1,41 @@
+@import "../../assets/styles/helper/variables";
+@import "../../assets/styles/helper/mixins";
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(rem(343), 100%), 1fr));
+  align-items: start;
+  gap: rem(32);
+  margin-bottom: rem(100);
+  padding-top: rem(11);
+}
+
+.block {
+  background: #f5f5f5;
+  border-radius: rem(9);
+  .img {
+    // Costil
+    margin-bottom: rem(-4);
+  }
+  img {
+    border-radius: 0 0 rem(9) rem(9);
+    width: 100%;
+  }
+  .text {
+    text-align: center;
+    padding: rem(16);
+  }
+  h2 {
+    font-weight: 500;
+    font-size: rem(22);
+    line-height: rem(27);
+    margin-bottom: rem(6);
+    word-break: break-word;
+  }
+  p {
+    font-weight: 500;
+    font-size: rem(15);
+    line-height: rem(22);
+    color: #7d8581;
+  }
+}

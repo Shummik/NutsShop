@@ -1,0 +1,222 @@
+@import "../../assets/styles/helper/variables";
+@import "../../assets/styles/helper/mixins";
+
+.basket {
+  padding-bottom: rem(100);
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(rem(250), 1fr));
+    gap: rem(20);
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: rem(22);
+  line-height: rem(27);
+  margin-bottom: rem(25);
+}
+
+.block {
+  position: relative;
+  height: rem(94);
+  width: 100%;
+  max-width: rem(450);
+  border-radius: rem(10);
+  background: #f74c4c;
+  margin-bottom: rem(15);
+  &.active {
+    .blockInfo {
+      width: calc(100% - 5.56rem);
+      .title {
+        max-width: 100%;
+      }
+    }
+    .blockDelBtn {
+      img {
+        filter: contrast(2) brightness(2);
+      }
+    }
+  }
+  &Info {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+    border-radius: rem(9);
+    transition: width 0.4s ease-in-out;
+    padding: rem(18) rem(5) rem(18) rem(34);
+    font-size: rem(16);
+    .title {
+      font-weight: 700;
+      font-size: rem(15);
+      line-height: rem(25);
+      margin-bottom: rem(10);
+      max-width: calc(100% - 4.375rem);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: all 0.4s ease-in-out;
+    }
+    .numbers {
+      display: flex;
+      align-items: center;
+    }
+    .price {
+      margin-left: rem(19);
+      font-weight: 700;
+      font-size: rem(15);
+      color: $textColorGreen;
+    }
+  }
+  &DelBtn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: rem(89);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+    img {
+      transition: filter 0.4s ease-in-out;
+    }
+  }
+}
+
+.basketList {
+  //   padding-bottom: rem(20);
+}
+.delivery {
+  padding-bottom: rem(16);
+  h3 {
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: rem(22);
+    margin-bottom: rem(24);
+  }
+  &Location {
+    position: relative;
+    line-height: rem(19);
+    margin-bottom: rem(20);
+    input[type="radio"] {
+      display: none;
+      &:checked + label span:after {
+        content: " ";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+        background: $textColorGreen;
+      }
+    }
+    label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-left: rem(2);
+      span {
+        position: relative;
+        display: inline-block;
+        width: rem(18);
+        height: rem(18);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        // outline: rem(2) solid #cacdcc;
+        border: rem(2) solid #cacdcc;
+        margin-right: rem(15);
+      }
+    }
+  }
+  .aboutBtn {
+    font-size: rem(15);
+    line-height: rem(18);
+    color: #7d8581;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: rem(4);
+    padding-top: rem(7);
+  }
+}
+
+.inputWrap {
+  position: relative;
+  img {
+    position: absolute;
+    top: rem(17);
+    right: rem(24);
+  }
+}
+
+.mail {
+  p {
+    font-size: rem(15);
+    line-height: rem(18);
+    margin-bottom: rem(37);
+    span {
+      font-weight: 700;
+      font-size: rem(18);
+      line-height: rem(22);
+      margin-left: rem(6);
+    }
+  }
+  &Input {
+    width: 100%;
+    height: rem(50);
+    max-width: rem(450);
+    background: #f5f5f5;
+    border-radius: rem(5);
+    border: none;
+    outline: none;
+    margin-bottom: rem(16);
+    padding: rem(16) rem(48) rem(16) rem(18);
+    font-size: rem(15);
+    line-height: rem(18);
+    &.invalid {
+      color: #f74c4c;
+      outline: rem(2) solid #f74c4c;
+    }
+  }
+}
+
+.thanksWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bgColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(16);
+
+  .thanksContent {
+    width: 100%;
+    max-width: rem(450);
+    font-weight: 500;
+    text-align: center;
+    margin-top: rem(92);
+  }
+  img {
+    margin-bottom: rem(48);
+  }
+  h3 {
+    margin-bottom: rem(18);
+    font-size: rem(18);
+    line-height: rem(22);
+  }
+  p {
+    margin-bottom: rem(26);
+
+    font-size: rem(15);
+    line-height: rem(22);
+  }
+}

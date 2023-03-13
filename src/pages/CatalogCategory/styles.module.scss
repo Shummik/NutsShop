@@ -1,0 +1,20 @@
+@import "../../assets/styles/helper/variables";
+@import "../../assets/styles/helper/mixins";
+
+.categories {
+  margin-top: rem(2);
+  margin-bottom: rem(100);
+  h2 {
+    font-weight: 500;
+    font-size: rem(22);
+    line-height: rem(27);
+    padding-top: rem(2);
+    margin-bottom: rem(19);
+  }
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(rem(160), 1fr));
+  gap: rem(18) rem(23);
+  margin-bottom: rem(26);
+}

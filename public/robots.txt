@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: *
+Disallow: /
+User agent: Googlebot
+Allow: /

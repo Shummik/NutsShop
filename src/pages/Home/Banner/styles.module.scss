@@ -1,0 +1,48 @@
+@import "../../../assets/styles/helper/variables";
+@import "../../../assets/styles/helper/mixins";
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  margin-top: rem(52);
+  margin-bottom: rem(61);
+  .text {
+    max-width: rem(600);
+    padding: 0 rem(12);
+  }
+  .button {
+    margin: 0 rem(12);
+  }
+  h1 {
+    font-weight: 500;
+    font-size: rem(22);
+    line-height: rem(32);
+    text-align: center;
+    margin: rem(12) rem(15) rem(28);
+    @media (min-width: $lgTableWidth) {
+      text-align: left;
+    }
+    span {
+      position: relative;
+      color: $textColorGreen;
+      margin-left: rem(10);
+    }
+  }
+}
+
+.tabLine {
+  animation: blinkText 1s linear infinite;
+}
+@keyframes blinkText {
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}

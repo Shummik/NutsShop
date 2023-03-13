@@ -1,0 +1,60 @@
+// var, mixins
+@import "./helper/variables";
+@import "./helper/mixins";
+@import "./helper/fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: $mainFontColor;
+  scroll-behavior: smooth;
+  font-size: $mainFontSize;
+  font-family: $mainFont;
+
+  @media (max-width: $desktopWidth) {
+    font-size: calcFluidFontSize(11.5, 20, 992, 1480);
+  }
+  @media (max-width: $lgTableWidth) {
+    font-size: calcFluidFontSize(10.7243, 16, 576, 992);
+  }
+  @media (max-width: $lgPhoneWidth) {
+    font-size: calcFluidFontSize(11.9468, 24.5761, 280, 576);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: rem(30);
+}
+
+.green {
+  color: $textColorGreen;
+}
+
+.grey {
+  color: $textColorGrey;
+}

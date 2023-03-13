@@ -1,0 +1,22 @@
+@import "../../assets/styles/helper/variables";
+@import "../../assets/styles/helper/mixins";
+
+.address {
+  font-weight: 500;
+  font-size: rem(15);
+  line-height: rem(18);
+  color: #cacdcc;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: rem(17);
+  margin-bottom: rem(17);
+  * {
+    margin-right: rem(14);
+    white-space: nowrap;
+    &:last-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

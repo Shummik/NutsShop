@@ -1,0 +1,9 @@
+@import "../../assets/styles/helper/variables";
+@import "../../assets/styles/helper/mixins";
+
+.layout {
+  width: 100%;
+  max-width: rem(1250);
+  padding: 0 rem(16);
+  margin: 0 auto;
+}
